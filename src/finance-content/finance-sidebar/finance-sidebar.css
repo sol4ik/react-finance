@@ -1,0 +1,7 @@
+.finance-sidebar {
+    /* display: inline; */
+    float: right;
+    margin-left: 5%;
+
+    padding: 1em;
+}
