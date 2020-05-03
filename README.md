@@ -17,6 +17,12 @@ I personally use **npm** so here's the example of installation
     npm i react-chartjs-2
     npm i chart.js
 
+
+## issues to fix
+Search bar:
+* fix the SearchIcon from @material-ui/icons (undestand why it won't nicely line up with the input)
+
+
 ## to do
 Ideas for further development and better UX:
 * **stats section**
