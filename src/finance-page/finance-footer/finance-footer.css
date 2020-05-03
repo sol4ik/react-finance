@@ -1,0 +1,18 @@
+.finance-footer {
+    /* to fix  */
+    position: fixed;
+    bottom: 0;
+
+    padding: 0.5em;
+
+    background-color: #1A237E;
+    color: white;
+}
+.footer-icon {
+    float: left;
+    margin: 0;
+    margin-right: 0.5em;
+}
+.footer-text {
+    margin: 0;
+}
