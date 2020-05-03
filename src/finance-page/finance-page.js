@@ -13,7 +13,7 @@ export default class FinancePage extends React.Component {
             <div className="finance-page">
                 <FinanceHeader></FinanceHeader>
                 <FinanceSearch></FinanceSearch>
-                <div className="page-content full-width">
+                <div className="page-content full-width row-container">
                     <FinanceChart></FinanceChart>
                     <FinanceSideBar></FinanceSideBar>
                 </div>

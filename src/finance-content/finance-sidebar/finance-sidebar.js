@@ -9,6 +9,7 @@ export default class FinanceSideBar extends React.Component {
         return (
             <div className="finance-sidebar">
                 <FinanceInfo></FinanceInfo>
+                {/* to do finnace stats for future */}
             </div>
         );
     }

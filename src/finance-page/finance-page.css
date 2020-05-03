@@ -11,3 +11,7 @@
     position: absolute;
     top: 8em;
 }
+.row-container {
+    display: flex;
+    flex-direction: row;
+}
