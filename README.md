@@ -16,3 +16,12 @@ I personally use **npm** so here's the example of installation
     npm i @material-ui/icons
     npm i react-chartjs-2
     npm i chart.js
+
+## to do
+Ideas for further development and better UX:
+* **stats section**
+    * bar chart on daily chages (colors to represent growth or withering)
+    * table ob daily statistics values (previous close value, current open, current highest and so on)
+* buttons bar **navigation on time intervals**
+    * choose start and end dates
+    * choose step (daily, weekly, monthly)
