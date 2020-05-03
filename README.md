@@ -22,6 +22,6 @@ Ideas for further development and better UX:
 * **stats section**
     * bar chart on daily chages (colors to represent growth or withering)
     * table ob daily statistics values (previous close value, current open, current highest and so on)
-* buttons bar **navigation on time intervals**
+* buttons bar for **navigation on time intervals**
     * choose start and end dates
     * choose step (daily, weekly, monthly)

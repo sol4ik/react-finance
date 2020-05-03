@@ -8,8 +8,10 @@
 }
 
 .page-content {
-    position: absolute;
+    position: fixed;
     top: 8em;
+
+    padding-bottom: 4em;
 }
 .row-container {
     display: flex;

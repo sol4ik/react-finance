@@ -15,8 +15,9 @@ export default class FinanceSearch extends React.Component {
                     <div className="right-float-wrapper">
                         <input className="search-input" type="text" placeholder="search.."/>
                         <button className="search-button" type="submit">
-                            <SearchIcon style={{ fontSize: 35 }}></SearchIcon>
-                            </button>
+                            {/* <SearchIcon style={{ fontSize: 30 }}></SearchIcon> */}
+                            find
+                        </button>
                     </div>
                 </form>
             </div>
