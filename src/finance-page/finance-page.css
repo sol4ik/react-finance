@@ -1,0 +1,19 @@
+.full-width {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.finance-page {
+    position: relative;
+}
+
+.page-content {
+    position: fixed;
+    top: 8em;
+
+    padding-bottom: 4em;
+}
+.row-container {
+    display: flex;
+    flex-direction: row;
+}

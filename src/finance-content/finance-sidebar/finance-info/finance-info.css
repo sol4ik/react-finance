@@ -1,0 +1,13 @@
+.finance-info-box {
+    min-height: 5em;
+
+    padding: 1em;
+}
+.info-box-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.info-box-text {
+    font-size: 17px;
+}

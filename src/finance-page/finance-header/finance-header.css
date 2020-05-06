@@ -1,0 +1,24 @@
+.finance-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    color: white;
+    background-color: #1A237E;
+}
+.main-title {
+    padding: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0;
+
+    font-size: 2em;
+    font-weight: bold;
+}
+.subtitle {
+    padding: 0.5em;
+    padding-top: 0;
+    padding-left: 3em;
+
+    font-size: 1em;
+    color: #E0E0E0;
+}

@@ -1,0 +1,22 @@
+.finance-chart-container {
+    margin: 0;
+    width: 55%;
+    padding: 2em;
+    padding-left: 5%;
+}
+.finance-chart-title {
+    padding-left: 5%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+.finance-chart-subtitle {
+    padding-left: 8%;
+    padding-top: 0;
+    margin-top: 0;
+
+    font-size: 15px;
+    color: #757575;
+}
