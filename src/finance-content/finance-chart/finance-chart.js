@@ -9,30 +9,30 @@ export default class FinanceChart extends React.Component {
         super();
         this.state = {
             title: 'S&P 500 index',
-            subtitle: 'subtitle on the timeperiod of data goes here',
+            subtitle: 'based on random data',
             data: {
-                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                 datasets: [
                   {
                     label: 'S&P 500 Index',
                     fill: false,
-                    lineTension: 0.1,
+                    lineTension: 0.,
                     backgroundColor: 'rgba(75,192,192,0.4)',
-                    borderColor: 'rgba(75,192,192,1)',
+                    borderColor: '#4a26fd',
                     borderCapStyle: 'butt',
                     borderDash: [],
                     borderDashOffset: 0.0,
                     borderJoinStyle: 'miter',
-                    pointBorderColor: 'rgba(75,192,192,1)',
-                    pointBackgroundColor: '#fff',
+                    pointBorderColor: '#4a26fd',
+                    pointBackgroundColor: '#4a26fd',
                     pointBorderWidth: 1,
                     pointHoverRadius: 5,
-                    pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-                    pointHoverBorderColor: 'rgba(220,220,220,1)',
+                    pointHoverBackgroundColor: '#0000e4',
+                    pointHoverBorderColor: '#0000e4',
                     pointHoverBorderWidth: 2,
                     pointRadius: 1,
                     pointHitRadius: 10,
-                    data: [65, 59, 80, 81, 56, 55, 40]
+                    data: [65, 59, 80, 81, 56, 55, 40, 42, 12, 13, 14, 15]
                   }
                 ],
               },

@@ -5,3 +5,18 @@
 .App {
   font-family: Manrope;
 }
+
+/* shared styles */
+.full-width {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.row-container {
+  display: flex;
+  flex-direction: row;
+}
+.column-container {
+  display: flex;
+  flex-direction: column;
+}
