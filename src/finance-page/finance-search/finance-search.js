@@ -14,10 +14,13 @@ export default class FinanceSearch extends React.Component {
                 <form className="search-form">
                     <div className="right-float-wrapper">
                         <input className="search-input" type="text" placeholder="search.."/>
-                        <button className="search-button" type="submit">
-                            {/* <SearchIcon style={{ fontSize: 30 }}></SearchIcon> */}
-                            find
-                        </button>
+                        <div className="seach-button-container">
+                            <div className="search-button">
+                                <a className="search-link" href="#">
+                                    <SearchIcon className="search-icon"></SearchIcon>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
