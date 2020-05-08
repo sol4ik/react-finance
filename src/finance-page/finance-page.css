@@ -3,15 +3,8 @@
     width: 100%;
 }
 
-.finance-page {
-    position: relative;
-}
-
 .page-content {
-    position: fixed;
-    top: 8em;
-
-    padding-bottom: 4em;
+    padding: 0;
 }
 .row-container {
     display: flex;

@@ -1,8 +1,6 @@
 .finance-footer {
-    position: fixed;
-    bottom: 0;
-
-    padding: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.7em;
 
     background-color: #1A237E;
     color: white;
