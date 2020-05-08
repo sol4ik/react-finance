@@ -1,7 +1,7 @@
 .finance-info-box {
-    min-height: 5em;
+    min-height: 50px;
 
-    padding: 1em;
+    padding: 10px;
 }
 .info-box-title {
     text-align: center;

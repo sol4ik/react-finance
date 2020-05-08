@@ -2,19 +2,23 @@
     color: white;
     background-color: #1A237E;
 }
+.titles-container {
+    padding-top: 10px;
+    padding-left: 20px;
+}
 .main-title {
-    padding: 1em;
-    padding-top: 0.5em;
+    padding: 10px;
+    padding-top: 5px;
     padding-bottom: 0;
 
-    font-size: 2em;
+    font-size: 35px;
     font-weight: bold;
 }
 .subtitle {
-    padding: 0.5em;
+    padding: 5px;
     padding-top: 0;
-    padding-left: 3em;
+    padding-left: 30px;
 
-    font-size: 1em;
+    font-size: 18px;
     color: #E0E0E0;
 }
