@@ -1,8 +1,11 @@
 import React from 'react';
 
-import $ from 'jquery';
-
 import './finance-stats.css';
+
+// growth sign constants
+const up = '⬆';
+const down = '⬇';
+
 
 export default class FinanseStats extends React.Component {
     constructor(props) {
@@ -22,13 +25,26 @@ export default class FinanseStats extends React.Component {
         }
     }
     componentDidMount() {
-        // $.getJSON('/content/' + this.props.tickerSymb + '.json', function(json) {
-        //     console.log(json);
-            
-            // this.setState({
-            //     summaryData: data
-            // });
-        // });
+        const summaryFile = require('./content/dji.json');
+
+        fetch(summaryFile)
+            .then(response => {
+                console.log(response);
+                return response.json()
+            })
+            .then(json => {
+                console.log("HHEEEEREEEEEEEE");
+                console.log(json);
+                // this.setState({
+                //     summaryData: JSON.parse(text)
+                // })
+            });
+
+        // if (this.state.summaryData.curGrowth[0] === '-') {
+        //     this.setState({
+        //         summaryData.growthSign: down;
+        //     })
+        // }
     }
     render() {
         return (

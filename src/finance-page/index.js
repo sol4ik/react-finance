@@ -2,11 +2,11 @@ import React from 'react';
 
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import FinanceHeader from './finance-header/finance-header';
-import FinanceSearch from './finance-search/finance-search';
+import FinanceHeader from './finance-header';
+import FinanceSearch from './finance-search';
 import FinanceWelcome from '../finance-welcome';
-import FinanceContent from '../finance-content/finance-content'; 
-import FinanceFooter from './finance-footer/finance-footer';
+import FinanceContent from '../finance-content'; 
+import FinanceFooter from './finance-footer';
 import FinanceNotFound from '../finance-not-found';
 
 export default class FinancePage extends React.Component {

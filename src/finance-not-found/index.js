@@ -1,7 +1,5 @@
 import React from 'react';
 
-import TrendingUpIcon from '@material-ui/icons/TrendingUp';
-
 import './finance-not-found.css';
 
 export default class FinanceNotFound extends React.Component {
