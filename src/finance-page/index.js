@@ -9,14 +9,16 @@ import FinanceContent from '../finance-content';
 import FinanceFooter from './finance-footer';
 import FinanceNotFound from '../finance-not-found';
 
+import './finance-page.css';
+
 export default class FinancePage extends React.Component {
     render() {
         return (
             <div className="finance-page">
-                <div className="header-section">
+                <div className="above-footer-section">
                     <FinanceHeader></FinanceHeader>
                     <FinanceSearch></FinanceSearch>
-                </div>
+                
                 <Router>
                     <Switch>
                         <Route
@@ -36,6 +38,7 @@ export default class FinancePage extends React.Component {
                         />
                     </Switch>
                 </Router>
+                </div>
                 <FinanceFooter></FinanceFooter>
             </div>
         );
