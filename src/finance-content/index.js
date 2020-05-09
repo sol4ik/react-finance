@@ -1,7 +1,7 @@
 import React from 'react';
 
-import FinanceChart from './finance-chart/finance-chart';
-import FinanceSideBar from './finance-sidebar/finance-sidebar';
+import FinanceChart from './finance-chart';
+import FinanceSideBar from './finance-sidebar';
 
 import './finance-content.css';
 
