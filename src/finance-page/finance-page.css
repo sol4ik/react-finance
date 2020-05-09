@@ -1,0 +1,9 @@
+.finance-page {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.header-section {
+    flex-shrink: 0;
+}

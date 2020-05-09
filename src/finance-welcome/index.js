@@ -23,7 +23,6 @@ export default class FinanceWelcome extends React.Component {
                     <br />
                     Stay healthy ♡
                 </div>
-                <div className="push"></div>
             </div>
         );
     }

@@ -4,6 +4,8 @@
 
     background-color: #1A237E;
     color: white;
+
+    flex-shrink: 0;
 }
 .footer-icon {
     margin: 0;

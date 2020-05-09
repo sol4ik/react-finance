@@ -13,8 +13,10 @@ export default class FinancePage extends React.Component {
     render() {
         return (
             <div className="finance-page">
-                <FinanceHeader></FinanceHeader>
-                <FinanceSearch></FinanceSearch>
+                <div className="header-section">
+                    <FinanceHeader></FinanceHeader>
+                    <FinanceSearch></FinanceSearch>
+                </div>
                 <Router>
                     <Switch>
                         <Route

@@ -1,0 +1,31 @@
+{
+    "title": "S&P 500 Index",
+    "subtitle": "based on data from May 9, 2019 until May 9, 2020",
+    "data": {
+        "labels": ["Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May"],
+        "datasets": [
+                    {
+                        "label": "S&P 500 Index",
+                        "fill": false,
+                        "lineTension": 0.05,
+                        "backgroundColor": "rgba(75,192,192,0.4)",
+                        "borderColor": "#00796B",
+                        "borderCapStyle": "butt",
+                        "borderDash": [],
+                        "borderDashOffset": 0.0,
+                        "borderJoinStyle": "miter",
+                        "pointBorderColor": "#00796B",
+                        "pointBackgroundColor": "#00796B",
+                        "pointBorderWidth": 1,
+                        "pointHoverRadius": 5,
+                        "pointHoverBackgroundColor": "#00695C",
+                        "pointHoverBorderColor": "#00695C",
+                        "pointHoverBorderWidth": 2,
+                        "pointRadius": 1,
+                        "pointHitRadius": 10,
+                        "data": [2751.53, 2971.41, 2980.32, 2909.01, 2983.69, 3050.72, 3143.85, 3244.67, 3235.66, 2974.28, 2498.08, 2908.83]
+                    }
+                    ]
+        }
+    }
+

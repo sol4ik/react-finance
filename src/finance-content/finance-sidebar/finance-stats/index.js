@@ -13,38 +13,29 @@ export default class FinanseStats extends React.Component {
         this.state = {
             summaryData: {
                 growthSign: '⬆',
-                curValue: '2,921.96',
-                curGrowth: '+40.77 (+1.42%)',
-                prevClose: '2,881.19',
-                open: '2908.83',
-                volume:	'1,014,940,598',
-                dayRange: '2,902.88 - 2,919.05',
-                yearRange: '2,191.86 - 3,393.52',
-                avgVolume: '6,039,020,806'
+                curValue: '-',
+                curGrowth: '+0 (+0%)',
+                prevClose: '0',
+                open: '0',
+                volume:	'0',
+                dayRange: '0',
+                yearRange: '0',
+                avgVolume: '0'
             }
         }
     }
     componentDidMount() {
-        const summaryFile = require('./content/dji.json');
-
-        fetch(summaryFile)
-            .then(response => {
-                console.log(response);
-                return response.json()
+        const jsonFilePath = require("./content/" + this.props.tickerSymb + ".txt");
+        
+        fetch(jsonFilePath)
+          .then(response => {
+            return response.text()
+          })
+          .then(text => {
+            this.setState({
+                summaryData: JSON.parse(text)
             })
-            .then(json => {
-                console.log("HHEEEEREEEEEEEE");
-                console.log(json);
-                // this.setState({
-                //     summaryData: JSON.parse(text)
-                // })
-            });
-
-        // if (this.state.summaryData.curGrowth[0] === '-') {
-        //     this.setState({
-        //         summaryData.growthSign: down;
-        //     })
-        // }
+          });
     }
     render() {
         return (
