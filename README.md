@@ -2,18 +2,14 @@
 
 Final project for Web delopment course (React development module).
 
-## packages used
-In order to create beautiful (well.. more or less) UI I used the following packages besides **React**
-* @material-ui/icons
-* react-chartjs-2
-* react-markdown
-* react-text-collapse
+## web-site routing
+Af the search feature is not developed yet, the users can surf through 4 pages:
+* **/** - welcome page
+* **/dji** - data on Dow Jones Industrial Average
+* **/gspc** - data on S&P 500 Index
+* 404 not found page for any query that doesn't match the ones above
 
-## to do
-Ideas for further development and better UX:
-* **stats section**
-    * bar chart on daily chages (colors to represent growth or withering)
-    * table on daily statistics values (previous close value, current open, current highest and so on)
-* buttons bar for **navigation on time intervals**
-    * choose start and end dates
-    * choose step (daily, weekly, monthly)
+The routing process is managed in **src/finance-page/index.js** file.
+---
+
+All the data for content components is fetched from the local files stored in respective **content** folders. 
