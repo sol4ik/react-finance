@@ -1,0 +1,30 @@
+.growth-sign {
+    font-size: 35px;
+    color: green;
+}
+.cur-data {
+    margin-bottom: 15px;
+}
+.cur-value {
+    font-size: 35px;
+    font-weight: bold;
+}
+.cur-growth {
+    color: #424242;
+}
+.divider {
+    border-top: 1px solid #1A237E;
+}
+.summary-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.summary-table {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+.table-title {
+    font-weight: bold;
+}

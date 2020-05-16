@@ -1,0 +1,30 @@
+{
+    "title": "Dow Jones Industrial Average",
+    "subtitle": "based on data from May 9, 2019 until May 9, 2020",
+    "data": {
+        "labels": ["Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May"],
+        "datasets": [
+                    {
+                        "label": "Dow Jones Industrial Average",
+                        "fill": false,
+                        "lineTension": 0.05,
+                        "backgroundColor": "rgba(75,192,192,0.4)",
+                        "borderColor": "#4a26fd",
+                        "borderCapStyle": "butt",
+                        "borderDash": [],
+                        "borderDashOffset": 0.0,
+                        "borderJoinStyle": "miter",
+                        "pointBorderColor": "#4a26fd",
+                        "pointBackgroundColor": "#4a26fd",
+                        "pointBorderWidth": 1,
+                        "pointHoverRadius": 5,
+                        "pointHoverBackgroundColor": "#0000e4",
+                        "pointHoverBorderColor": "#0000e4",
+                        "pointHoverBorderWidth": 2,
+                        "pointRadius": 1,
+                        "pointHitRadius": 10,
+                        "data": [25983.84, 26922.12, 26287.44, 26797.46, 26816.59, 27681.24, 28015.06, 28823.77, 29102.51, 25864.76, 19173.98, 24331.32]
+                    }]
+        }
+    }
+

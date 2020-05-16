@@ -2,32 +2,15 @@
 
 Final project for Web delopment course (React development module).
 
-## for development
-In order to take part in development process you need to install the following packages besides **React**
+## web-site routing
+Af the search feature is not developed yet, the users can surf through 4 pages:
+* **/** - welcome page
+* **/dji** - data on Dow Jones Industrial Average
+* **/gspc** - data on S&P 500 Index
+* 404 not found page for any query that doesn't match the ones above
 
-* @material-ui/icons
-* react-chartjs-2
-* chart.js
+The routing process is managed in **src/finance-page/index.js** file.
 
-You can do so by using **npm** as well as **yarn**.
+##
 
-I personally use **npm** so here's the example of installation
-
-    npm i @material-ui/icons
-    npm i react-chartjs-2
-    npm i chart.js
-
-
-## issues to fix
-Search bar:
-* fix the SearchIcon from @material-ui/icons (undestand why it won't nicely line up with the input)
-
-
-## to do
-Ideas for further development and better UX:
-* **stats section**
-    * bar chart on daily chages (colors to represent growth or withering)
-    * table ob daily statistics values (previous close value, current open, current highest and so on)
-* buttons bar for **navigation on time intervals**
-    * choose start and end dates
-    * choose step (daily, weekly, monthly)
+All the data for content components is fetched from the local files stored in respective **content** folders. 

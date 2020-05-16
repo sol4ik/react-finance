@@ -1,19 +1,18 @@
 .finance-footer {
-    position: fixed;
-    bottom: 0;
-
-    padding: 0.5em;
+    padding-top: 5px;
+    padding-bottom: 7px;
 
     background-color: #1A237E;
     color: white;
+
+    flex-shrink: 0;
 }
 .footer-icon {
-    float: left;
     margin: 0;
-    margin-right: 0.5em;
+    margin-right: 5px;
     margin-left: 5%;
 }
 .footer-text {
     margin: 0;
-    margin-top: 0.5em;
+    margin-top: 5px;
 }

@@ -1,0 +1,36 @@
+.finance-not-found {
+    padding: 5% 0;
+}
+.not-found-error-number {
+    text-align: center;
+
+    color: #1A237E;
+    font-size: 100px;
+    font-weight: bold;
+}
+.not-found-error-msg {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+.not-found-description {
+    padding: 10px 5%;
+    text-align: center;
+    font-size: 20px;
+    color: #424242;
+}
+
+.welcome-icon {
+    position: absolute;
+    left: 45%;
+
+    width: 25%;
+    height: 25%;
+    
+}
+.welcome-title {
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+}
+

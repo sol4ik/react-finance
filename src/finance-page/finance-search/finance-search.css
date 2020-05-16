@@ -1,17 +1,19 @@
 .finance-search-bar {
-    position: absolute;
-    top: 5.6em;
-
+    height: 65px;
     background-color: #E0E0E0;
 }
 .right-float-wrapper {
     float: right;
     margin-right: 5%;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
 }
 .search-input {
-    margin: 0.5em;
+    margin: 10px;
     margin-right: 0;
-    padding: 0.5em;
+    padding: 10px;
     width: 75%;
     border: none;
     font-size: 17px;
@@ -19,17 +21,28 @@
 .search-input:focus {
     border: none;
 }
-.search-button {
+.seach-button-container {
+    margin-top: 10px;
     margin-left: 0;
-    margin-top: 0.5em; 
-    padding: 0.5em;
+    padding: 0;
+}
+.search-button {
+    position: relative;
+
+    width: 35px;
+    height: 39px;
+
     background:#1A237E;
     color: white;
-    font-size: 17px;
-    font-weight: bold;
-    
-    border: none;
 }
 .search-button:hover {
     background: #170f47;
+}
+.search-link {
+    color: white;
+}
+.search-icon {
+    position: absolute;
+    top: 7px;
+    left: 5px;
 }
