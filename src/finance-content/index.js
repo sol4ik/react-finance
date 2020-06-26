@@ -4,6 +4,7 @@ import FinanceChart from './finance-chart';
 import FinanceSideBar from './finance-sidebar';
 
 import './finance-content.css';
+import { connect } from 'react-redux';
 
 export default class FinanceContent extends React.Component {
     render() {
