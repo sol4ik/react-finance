@@ -9,37 +9,61 @@ import FinanceContent from '../finance-content';
 import FinanceFooter from './finance-footer';
 import FinanceNotFound from '../finance-not-found';
 
+import { changeTickerSymbol } from '../actions/action-creators';
+import { connect } from 'react-redux';
+
 import './finance-page.css';
 
-export default class FinancePage extends React.Component {
+class FinancePage extends React.Component {
     render() {
         return (
             <div className="finance-page">
                 <div className="above-footer-section">
                     <FinanceHeader></FinanceHeader>
-                    <FinanceSearch></FinanceSearch>
                 
                 <Router>
-                    <div className="routing-button-container">
-                    <button className="routing-button" onClick={() => 
-                        dispatch(changeTickerSymbol('')) }>1st more info </button>
-                        <Link to="/">Home</Link>
+                    <div className="nav-buttons-container full-width">
+                        <div className="nav-buttons">                        
+                            <button className="routing-button" onClick={() => 
+                                    this.props.changeTickerSymbol('dji') }>
+                                <Link
+                                    to="/dji"
+                                    style={{
+                                        textDecoration: 'none',
+                                        color: 'white',
+                                        fontSize: '14px'
+                                    }}
+                                >The Dow Jones Index</Link>
+                            </button>
+
+                            <button className="routing-button" onClick={() => 
+                                    this.props.changeTickerSymbol('gspc') }>
+                                <Link 
+                                    to="/gspc"
+                                    style={{
+                                        textDecoration: 'none',
+                                        color: 'white',
+                                        fontSize: '14px'
+                                    }}
+                                >The S&#x26;P 500 Index</Link>
+                            </button>
+
+                            <button className="routing-button" onClick={() => 
+                                    this.props.changeTickerSymbol('') }>
+                                <Link
+                                    to="/"
+                                    style={{
+                                        textDecoration: 'none',
+                                        color: 'white',
+                                        fontSize: '14px'
+                                    }}
+                                >Home</Link>
+                            </button>
+                        </div>
                     </div>
-                    
-                    <div className="routing-button-container">
-                    <button className="routing-button" onClick={() => 
-                        dispatch(changeTickerSymbol('dji')) }>1st more info </button>
-                        <Link to="/dji">The Dow-Jones Index</Link>
-                    </div>
-
-                    <div className="routing-button-container">
-                    <button className="routing-button" onClick={() => 
-                        dispatch(changeTickerSymbol('gspc')) }>1st more info </button>
-                        <Link to="/gspc">The S P 500 Industrial Average</Link>
-                    </div>
-
-
-
+                       
+                    <FinanceSearch></FinanceSearch> 
+                                        
                     <Switch>
                         <Route
                             exact path="/"
@@ -47,11 +71,11 @@ export default class FinancePage extends React.Component {
                         />
                         <Route
                             exact path="/gspc"
-                            render={(props) => <FinanceContent {...props} tickerSymb={'gspc'} />}
+                            component={ FinanceContent }
                         />
                         <Route
                             path="/dji"
-                            render={(props) => <FinanceContent {...props} tickerSymb={'dji'} />}
+                            component={ FinanceContent }
                         />
                         <Route
                             component={ FinanceNotFound }
@@ -64,3 +88,13 @@ export default class FinancePage extends React.Component {
         );
     }
 }
+
+const mapStateToProps = (state, ownProps) => ({
+    tickerSymbol: state.tickerSymbol
+});
+
+const mapDispatchToProps = (dispatch, ownProps) => ({
+    changeTickerSymbol: (tickerSymbol) => dispatch(changeTickerSymbol(tickerSymbol))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(FinancePage);

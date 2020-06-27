@@ -6,7 +6,12 @@ import ReactTextCollapse from'react-text-collapse';
 
 import './finance-info.css';
 
-export default class FinanceInfo extends React.Component {
+import { connect } from 'react-redux';
+import { changeTickerSymbol } from '../../../actions/action-creators';
+
+import equal from 'fast-deep-equal';
+
+class FinanceInfo extends React.Component {
     constructor(props) {
         super(props);
 
@@ -29,8 +34,8 @@ export default class FinanceInfo extends React.Component {
             }
         }
     }
-    componentDidMount() {
-        const mdFilePath = require('./content/' + this.props.tickerSymb + '.md');
+    updateInfo() {
+        const mdFilePath = require('./content/' + this.props.tickerSymbol + '.md');
         
         
         fetch(mdFilePath)
@@ -43,6 +48,16 @@ export default class FinanceInfo extends React.Component {
             })
           })
       }
+
+    componentDidMount() {
+        this.updateInfo();
+    }
+    componentDidUpdate(prevProps) {
+        if (!equal(this.props.tickerSymbol, prevProps.tickerSymbol)) {
+          this.updateInfo();
+        }
+    }
+    
     render() {
         return(
             <div className="finance-info-box">
@@ -58,3 +73,13 @@ export default class FinanceInfo extends React.Component {
         );
     }
 }
+
+const mapStateToProps = (state, ownProps) => ({
+    tickerSymbol: state.tickerSymbol
+});
+
+const mapDispatchToProps = (dispatch, ownProps) => ({
+    changeTickerSymbol: (tickerSymbol) => dispatch(changeTickerSymbol(tickerSymbol))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(FinanceInfo);

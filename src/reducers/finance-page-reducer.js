@@ -1,4 +1,4 @@
-import { CHANGE_TICKER_SYMBOL } from '../actions/action-types';
+import { CHANGE_TICKER_SYMBOL, UPDATE_CHART_DATA } from '../actions/action-types';
 
 
 function financePageReducer(state, action) {
@@ -8,6 +8,12 @@ function financePageReducer(state, action) {
                 ...state,
                 tickerSymbol: action.tickerSymbol
             };
+
+        case UPDATE_CHART_DATA:
+            return {
+                ...state,
+                chartData: action.chartData
+            }
             
         default:
             return state;

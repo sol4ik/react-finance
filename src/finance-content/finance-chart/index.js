@@ -3,8 +3,13 @@ import {Line} from 'react-chartjs-2';
 
 import './finance-chart.css';
 
+import { changeTickerSymbol, updateChartData } from '../../actions/action-creators';
+import { connect } from 'react-redux';
 
-export default class FinanceChart extends React.Component {
+import equal from 'fast-deep-equal';
+
+
+class FinanceChart extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -18,8 +23,8 @@ export default class FinanceChart extends React.Component {
             }
         }
     }
-    componentDidMount() {
-      const jsonFilePath = require("./content/" + this.props.tickerSymb + ".txt");
+    updateChartParameters(){
+      const jsonFilePath = require("./content/" + this.props.tickerSymbol + ".txt");
         
         fetch(jsonFilePath)
           .then(response => {
@@ -34,6 +39,16 @@ export default class FinanceChart extends React.Component {
             }))
           });
     }
+    
+    componentDidMount() {
+      this.updateChartParameters()
+    }
+    componentDidUpdate(prevProps) {
+      if (!equal(this.props.tickerSymbol, prevProps.tickerSymbol)) {
+        this.updateChartParameters();
+      }
+    }
+
     render() {
     return (
       <div className="finance-chart-container">
@@ -44,3 +59,15 @@ export default class FinanceChart extends React.Component {
     );
   }
 }
+
+const mapStateToProps = (state, ownProps) => ({
+  tickerSymbol: state.tickerSymbol,
+  chartData: state.chartData
+});
+
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  changeTickerSymbol: (tickerSymbol) => dispatch(changeTickerSymbol(tickerSymbol)),
+  updateChartData: (chartData) => dispatch(updateChartData(chartData))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(FinanceChart);

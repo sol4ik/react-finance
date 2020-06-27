@@ -8,3 +8,28 @@
 .above-footer-section {
     flex: 1 0 auto;
 }
+
+.nav-buttons-container {
+    background-color: #E0E0E0;
+}
+
+.nav-buttons {
+    margin-left: 0;
+    padding: 5px;
+    padding-right: 5%;
+
+    overflow: auto;
+}
+
+.routing-button {
+    float: right;
+    padding: 10px;
+
+    background-color: #1A237E;
+    border: none;
+}
+.routing-button:hover {
+    background-color: #E0E0E0;
+
+    color: black;
+}

@@ -1,9 +1,14 @@
-import { CHANGE_TICKER_SYMBOL } from 'action-types';
+import { CHANGE_TICKER_SYMBOL, UPDATE_CHART_DATA } from './action-types';
 
 
-const changeTickerSymbol = (tickerSymbol) => ({
+const changeTickerSymbol = (ts) => ({
         type: CHANGE_TICKER_SYMBOL,
-        tickerSymbol
-    })
+        tickerSymbol: ts
+    });
 
-export default changeTickerSymbol;
+const updateChartData = (cd) => ({
+        type: UPDATE_CHART_DATA,
+        chartData: cd
+})
+
+export { changeTickerSymbol, updateChartData };

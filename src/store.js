@@ -2,7 +2,8 @@ import { createStore } from 'redux';
 import financePageReducer from './reducers/finance-page-reducer';
 
 const initState = {
-    tickerSymbol: ''
+    tickerSymbol: '',
+    chartData: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 };
 
 function configStore() {

@@ -2,12 +2,17 @@ import React from 'react';
 
 import './finance-stats.css';
 
+import { connect } from 'react-redux';
+import { changeTickerSymbol } from '../../../actions/action-creators';
+
+import equal from 'fast-deep-equal';
+
 // growth sign constants
 const up = '⬆';
 const down = '⬇';
 
 
-export default class FinanseStats extends React.Component {
+class FinanceStats extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -24,8 +29,8 @@ export default class FinanseStats extends React.Component {
             }
         }
     }
-    componentDidMount() {
-        const jsonFilePath = require("./content/" + this.props.tickerSymb + ".txt");
+    updateStats() {
+        const jsonFilePath = require("./content/" + this.props.tickerSymbol + ".txt");
         
         fetch(jsonFilePath)
           .then(response => {
@@ -37,6 +42,16 @@ export default class FinanseStats extends React.Component {
             })
           });
     }
+
+    componentDidMount() {
+        this.updateStats();
+    }
+    componentDidUpdate(prevProps) {
+        if (!equal(this.props.tickerSymbol, prevProps.tickerSymbol)) {
+          this.updateStats();
+        }
+    }
+
     render() {
         return (
             <div className="finance-stats">
@@ -87,3 +102,13 @@ export default class FinanseStats extends React.Component {
         );
     }
 }
+
+const mapStateToProps = (state, ownProps) => ({
+    tickerSymbol: state.tickerSymbol
+});
+
+const mapDispatchToProps = (dispatch, ownProps) => ({
+    changeTickerSymbol: (tickerSymbol) => dispatch(changeTickerSymbol(tickerSymbol))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(FinanceStats);
