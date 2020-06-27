@@ -47,7 +47,7 @@ class FinanceStats extends React.Component {
         this.updateStats();
     }
     componentDidUpdate(prevProps) {
-        if (!equal(this.props.tickerSymbol, prevProps.tickerSymbol)) {
+        if (!equal(this.props.tickerSymbol, prevProps.tickerSymbol)  && this.props.tickerSymbol != '') {
           this.updateStats();
         }
     }

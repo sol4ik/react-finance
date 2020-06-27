@@ -9,12 +9,31 @@ import FinanceContent from '../finance-content';
 import FinanceFooter from './finance-footer';
 import FinanceNotFound from '../finance-not-found';
 
-import { changeTickerSymbol } from '../actions/action-creators';
+import { changeTickerSymbol, updateChartData } from '../actions/action-creators';
 import { connect } from 'react-redux';
 
 import './finance-page.css';
 
 class FinancePage extends React.Component {
+    updateData(route) {
+        let newChartData = [];
+        
+        if (route === "dji" || route === "gspc") {            
+            const min = 0;
+            const max = 10000;
+            for (let i = 0; i < 12; i++) {
+                newChartData.push(min + Math.random() * (max - min))
+            }
+        } else {
+            for (let i = 0; i < 12; i++) {
+                newChartData.push(-1);
+            }
+        }
+
+        this.props.changeTickerSymbol(route);
+        this.props.updateChartData(newChartData);
+    }
+    
     render() {
         return (
             <div className="finance-page">
@@ -25,7 +44,7 @@ class FinancePage extends React.Component {
                     <div className="nav-buttons-container full-width">
                         <div className="nav-buttons">                        
                             <button className="routing-button" onClick={() => 
-                                    this.props.changeTickerSymbol('dji') }>
+                                    this.updateData('dji') }>
                                 <Link
                                     to="/dji"
                                     style={{
@@ -37,7 +56,7 @@ class FinancePage extends React.Component {
                             </button>
 
                             <button className="routing-button" onClick={() => 
-                                    this.props.changeTickerSymbol('gspc') }>
+                                    this.updateData('gspc') }>
                                 <Link 
                                     to="/gspc"
                                     style={{
@@ -49,7 +68,7 @@ class FinancePage extends React.Component {
                             </button>
 
                             <button className="routing-button" onClick={() => 
-                                    this.props.changeTickerSymbol('') }>
+                                    this.updateData('') }>
                                 <Link
                                     to="/"
                                     style={{
@@ -90,11 +109,13 @@ class FinancePage extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => ({
-    tickerSymbol: state.tickerSymbol
-});
-
-const mapDispatchToProps = (dispatch, ownProps) => ({
-    changeTickerSymbol: (tickerSymbol) => dispatch(changeTickerSymbol(tickerSymbol))
-});
+    tickerSymbol: state.tickerSymbol,
+    chartData: state.chartData
+  });
+  
+  const mapDispatchToProps = (dispatch, ownProps) => ({
+    changeTickerSymbol: (tickerSymbol) => dispatch(changeTickerSymbol(tickerSymbol)),
+    updateChartData: (chartData) => dispatch(updateChartData(chartData))
+  });
 
 export default connect(mapStateToProps, mapDispatchToProps)(FinancePage);

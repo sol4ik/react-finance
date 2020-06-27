@@ -33,7 +33,7 @@ class FinanceChart extends React.Component {
           .then(text => {
             const chartData = JSON.parse(text);
             
-            if (this.props.chartData[0] != -1) { // vheck for default values
+            if (this.props.chartData[0] != -1) { // check for default values
               chartData["data"]["datasets"][0]["data"] = this.props.chartData;
             }
 
@@ -60,7 +60,7 @@ class FinanceChart extends React.Component {
       this.updateChartParameters()
     }
     componentDidUpdate(prevProps) {
-      if (!equal(this.props.tickerSymbol, prevProps.tickerSymbol) || !equal(this.props.chartData, prevProps.chartData)) {
+      if (this.props.tickerSymbol != '' && (!equal(this.props.tickerSymbol, prevProps.tickerSymbol) || !equal(this.props.chartData, prevProps.chartData))) {
         this.updateChartParameters();
       }
     }

@@ -53,7 +53,7 @@ class FinanceInfo extends React.Component {
         this.updateInfo();
     }
     componentDidUpdate(prevProps) {
-        if (!equal(this.props.tickerSymbol, prevProps.tickerSymbol)) {
+        if (!equal(this.props.tickerSymbol, prevProps.tickerSymbol) && this.props.tickerSymbol != '') {
           this.updateInfo();
         }
     }
