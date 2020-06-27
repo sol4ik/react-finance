@@ -3,7 +3,7 @@ import financePageReducer from './reducers/finance-page-reducer';
 
 const initState = {
     tickerSymbol: '',
-    chartData: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    chartData: [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
 };
 
 function configStore() {

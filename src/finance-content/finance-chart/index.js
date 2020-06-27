@@ -32,6 +32,11 @@ class FinanceChart extends React.Component {
           })
           .then(text => {
             const chartData = JSON.parse(text);
+            
+            if (this.props.chartData[0] != -1) { // vheck for default values
+              chartData["data"]["datasets"][0]["data"] = this.props.chartData;
+            }
+
             this.setState(prevState => ({
                 title: chartData["title"],
                 subtitle: chartData["subtitle"],
@@ -39,12 +44,23 @@ class FinanceChart extends React.Component {
             }))
           });
     }
+    updateChartInfo() {
+      const min = 0;
+      const max = 10000;
+      let newData = [];
+      
+      for (let i = 0; i < 12; i++) {
+        newData.push(min + Math.random() * (max - min));
+      }
+
+      this.props.updateChartData(newData);
+    }
     
     componentDidMount() {
       this.updateChartParameters()
     }
     componentDidUpdate(prevProps) {
-      if (!equal(this.props.tickerSymbol, prevProps.tickerSymbol)) {
+      if (!equal(this.props.tickerSymbol, prevProps.tickerSymbol) || !equal(this.props.chartData, prevProps.chartData)) {
         this.updateChartParameters();
       }
     }
@@ -55,6 +71,10 @@ class FinanceChart extends React.Component {
         <p className="finance-chart-title">{this.state.title}</p>
         <p className="finance-chart-subtitle">{this.state.subtitle}</p>
         <Line data={this.state.data} options={this.state.options}/>
+        <button className="update-button" 
+          onClick={ () => this.updateChartInfo() }>
+          update chart data
+        </button>
       </div>
     );
   }
