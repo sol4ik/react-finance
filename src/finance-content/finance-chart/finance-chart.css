@@ -20,3 +20,18 @@
     font-size: 15px;
     color: #757575;
 }
+.update-button {
+    float: right;
+    margin-top: 15px;
+
+
+    background-color: #1A237E;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.update-button:hover {
+    background-color: #170f47;
+}

@@ -2,7 +2,7 @@
   font-family: Manrope;
   src: url(./font/Manrope-VariableFont_wght.ttf);
 }
-.App {
+.App, button {
   font-family: Manrope;
 }
 
@@ -19,4 +19,8 @@
 .column-container {
   display: flex;
   flex-direction: column;
+}
+
+button:active {
+  border: none;
 }
